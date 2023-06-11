@@ -1,0 +1,25 @@
+<div class="myupload justify-content-center">
+ <div class="col-6 input">
+  <!-- <div id=" row input"> -->
+  <label for="VisitLog" id="VisitLog_label" class="btn btn-import btn-outline-danger">Import Visit Log</label>
+  <input id="VisitLog" type="file" style="visibility: hidden;" (change)="onFileSelected($event)" accept=".csv">
+
+  <!-- <div>
+   <a class="btn btn-export" id="ExportButton">Export To CSV</a>
+  </div> -->
+
+
+ </div>
+ <table class="table table-hover" id="table">
+  <thead>
+   <tr>
+    <th *ngFor="let header of tableHeaders">{{ header }}</th>
+   </tr>
+  </thead>
+  <tbody>
+   <tr *ngFor="let row of tableData">
+    <td *ngFor="let column of row">{{ column }}</td>
+   </tr>
+  </tbody>
+ </table>
+</div>
