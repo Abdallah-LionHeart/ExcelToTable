@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class FileGeneratorComponent {
   downloadFile() {
-    const fileContent = 'assets/ClientFile/test.xlsx'; // Replace with your file URL
-    const fileName = 'test.xlsx'; // Replace with your desired file name
+    const fileContent = 'assets/ClientFile/test.xlsx';
+    const fileName = 'test.xlsx';
 
     const blob = new Blob([fileContent], { type: 'text/plain' });
     const url = window.URL.createObjectURL(blob);
