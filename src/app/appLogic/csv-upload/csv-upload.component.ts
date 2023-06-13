@@ -11,7 +11,6 @@ export class CsvUploadComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.somthing();
   }
 
 
@@ -40,15 +39,5 @@ export class CsvUploadComponent implements OnInit {
       this.tableData.push(columns);
     }
   }
-  somthing() {
-    var table = document.getElementById('table') as HTMLTableElement;
-    for (let i = 0; i < table.rows.length; i++) {
-      for (let j = 0; j < table.rows[i].cells.length; j++) {
-        table.rows[i].cells[j].onclick = function () {
-          console.log(table.rows[i].cells[j].innerHTML)
 
-        }
-      }
-    }
-  }
 }
